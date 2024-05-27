@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS krx.esg (
+    _ts TIMESTAMPTZ NOT NULL,
+    기준일자 DATE NOT NULL,
+    발행기관 VARCHAR(255) NOT NULL,
+    표준코드 VARCHAR(10) NOT NULL,
+    채권종류 VARCHAR(255) NOT NULL,
+    종목명 VARCHAR(255) NOT NULL,
+    상장일 DATE NOT NULL,
+    발행일 DATE NOT NULL,
+    상환일 DATE NOT NULL,
+    표면이자율 DECIMAL(5, 2) NOT NULL,
+    발행금액 BIGINT NOT NULL,
+    상장금액 BIGINT NOT NULL,
+    채권유형 VARCHAR(255) NOT NULL,
+    PRIMARY KEY (기준일자, 표준코드)
+);

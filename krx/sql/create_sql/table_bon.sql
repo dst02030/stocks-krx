@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS krx.bon (
+    _ts TIMESTAMPTZ NOT NULL,
+    기준일자 DATE NOT NULL,
+    시장구분 VARCHAR(20) NOT NULL,
+    종목코드 VARCHAR(12) NOT NULL,
+    종목명 VARCHAR(255) NOT NULL,
+    만기년수 INTEGER,
+    종목구분 VARCHAR(20),
+    종가 DECIMAL(18, 2) NOT NULL,
+    종가대비 DECIMAL(18, 2),
+    종가수익률 DECIMAL(9, 2) NOT NULL,
+    시가 DECIMAL(18, 2) NOT NULL,
+    시가수익률 DECIMAL(9, 2) NOT NULL,
+    고가 DECIMAL(18, 2) NOT NULL,
+    고가수익률 DECIMAL(9, 2) NOT NULL,
+    저가 DECIMAL(18, 2) NOT NULL,
+    저가수익률 DECIMAL(9, 2) NOT NULL,
+    거래량 BIGINT NOT NULL,
+    거래대금 BIGINT NOT NULL,
+    PRIMARY KEY (기준일자, 종목코드, 시장구분)
+);
